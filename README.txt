@@ -1,18 +1,2 @@
-JohnDoe Free Bootstrap landing page for personal and commercial use. Designed with ♥️ and creativity by Devcrud.com 
-
-Product Page: https://wwww.devcrud.com/
-
-Credits:
-
-    Demo Images:
-        Unsplash:       	(https://www.unsplash.com)
-
-    Icons:
-		Themify Icons: 		(https://themify.me/themify-icons)
-
-	Other:
-		JQuery: 			(https://www.jquery.com)
-		Bootstrap: 			(https://www.getbootstrap.com)
-		Bootstrap Affix: 	(http://getbootstrap.com/javascript/#affix)  
-		Isotope: 			(https://isotope.metafizzy.co/) 
-		Google Maps:		(https://maps.google.com)
+Welcome to my portfolio website repository! This site serves as a showcase of my skills, projects, and experiences in App development,web development, etc. It features a clean and modern design, responsive layouts, and interactive elements that highlight my work. The website is built using  HTML, CSS, JavaScript ensuring optimal performance and user experience. I continually update this portfolio to reflect my latest projects and learning endeavors. Feel free to explore my work and reach out for collaboration or inquiries! You can modify the placeholders to better fit your personal style and the specifics of your work.
+LINK : https://navaneethkrishna11.github.io/PortFolio02/public_html/index.html
