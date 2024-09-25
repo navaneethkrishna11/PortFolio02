@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Registration Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        h1 {
+            color: #F85C70;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #F85C70;
+            box-shadow: 0 0 0 3px rgba(248, 92, 112, 0.2);
+        }
+
+        .form-group:focus-within label {
+            color: #F85C70;
+        }
+
+        button {
+            background-color: #F85C70;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: #e54b5f;
+            animation: pulse 0.8s infinite;
+        }
+
+        button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 1;
+            }
+            20% {
+                transform: scale(25, 25);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(40, 40);
+            }
+        }
+
+        button:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+
+        .icon {
+            position: absolute;
+            top: 38px;
+            left: 10px;
+            color: #888;
+            transition: all 0.3s ease;
+        }
+
+        .form-group:focus-within .icon {
+            color: #F85C70;
+        }
+
+        input, select {
+            padding-left: 35px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Join Us Today</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <i class="fas fa-user icon"></i>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <i class="fas fa-user icon"></i>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <i class="fas fa-phone icon"></i>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <i class="fas fa-calendar icon"></i>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <i class="fas fa-venus-mars icon"></i>
+                <select id="gender" name="gender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <i class="fas fa-home icon"></i>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <i class="fas fa-city icon"></i>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <i class="fas fa-globe icon"></i>
+                <input type="text" id="country" name="country">
+            </div>
+
+            <div class="form-group">
+                <label for="zipCode">Zip Code</label>
+                <i class="fas fa-map-pin icon"></i>
+                <input type="text" id="zipCode" name="zipCode">
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <i class="fas fa-briefcase icon"></i>
+                <input type="text" id="occupation" name="occupation">
+            </div>
+
+            <div class="form-group">
+                <label for="interests">Interests</label>
+                <i class="fas fa-heart icon"></i>
+                <input type="text" id="interests" name="interests">
+            </div>
+
+            <div class="form-group">
+                <label for="howHeard">How did you hear about us?</label>
+                <i class="fas fa-info-circle icon"></i>
+                <select id="howHeard" name="howHeard">
+                    <option value="">Select</option>
+                    <option value="search">Search Engine</option>
+                    <option value="ad">Advertisement</option>
+                    <option value="friend">Friend</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</body>
+</html>
